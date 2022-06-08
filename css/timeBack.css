@@ -1,0 +1,147 @@
+body {
+	background-color: black;
+	user-select: none;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 980px){
+	.m-time {
+		width: 1000px;
+		height: 40rem;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 15rem;
+		position: relative;
+	}
+	.m-time_text {
+		font-size: 10rem;
+		color: white;
+	}
+	.u-focus {
+		width: 10rem;
+		font-size: 1.5rem;
+		height: 3rem;
+		margin: 0 auto;
+		background-color: white;
+		border-radius: 1rem;
+		line-height: 3rem;
+	}
+	.u-focus:hover {
+		background-color: #F4EEEE;
+	}
+	.u-focus:active {
+		background-color: #666;
+	}
+	.u-exit {
+		position: absolute;
+		width: 7rem;
+		height: 3rem;
+		line-height: 3rem;
+		background-color: white;
+		border-radius: 1rem;
+		right :4rem;
+		font-size: 1.5rem;
+		bottom: 1.5rem;
+	}
+	.u-exit:hover {
+		background-color: #F4EEEE;
+	}
+	.u-exit:active {
+		background-color: #666;
+	}
+
+}
+@media screen and (min-width: 640px) and (max-width: 980px) {
+	.m-time {
+		width: 70%;
+		height: 40rem;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 15rem;
+		position: relative;
+	}
+	.m-time_text {
+		font-size: 5rem;
+		color: white;
+	}
+	.u-focus {
+		width: 10rem;
+		font-size: 1.5rem;
+		height: 3rem;
+		margin: 0 auto;
+		background-color: white;
+		border-radius: 1rem;
+		line-height: 3rem;
+	}
+	.u-focus:hover {
+		background-color: #F4EEEE;
+	}
+	.u-focus:active {
+		background-color: #666;
+	}
+	.u-exit {
+		position: absolute;
+		width: 7rem;
+		height: 3rem;
+		line-height: 3rem;
+		background-color: white;
+		border-radius: 1rem;
+		right :4rem;
+		font-size: 1.5rem;
+		bottom: 1.5rem;
+	}
+	.u-exit:hover {
+		background-color: #F4EEEE;
+	}
+	.u-exit:active {
+		background-color: #666;
+	}
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+	.m-time {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		height: 10rem;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 15rem;
+		position: relative;
+	}
+	.m-time_text {
+		font-size: 3rem;
+		color: white;
+	}
+	.u-focus {
+		width: 6rem;
+		font-size: 1.3rem;
+		height: 2rem;
+		margin: 0 auto;
+		background-color: white;
+		border-radius: 0.7rem;
+		line-height: 2rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	.u-focus:active {
+		background-color: #666;
+	}
+	.u-exit {
+		width: 6rem;
+		font-size: 1.3rem;
+		height: 2rem;
+		margin: 0 auto;
+		background-color: white;
+		border-radius: 0.7rem;
+		line-height: 2rem;
+	}
+	.u-exit:active {
+		background-color: #666;
+	}
+}

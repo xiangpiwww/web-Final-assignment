@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<div class="setCountdown">
+			<li href="" class="">
+				<span>时</span>
+				<input type="text">
+			</li>
+			<li href="" class="">
+				<span>分</span>
+				<input type="text">
+			</li>
+			<li href="" class="">
+				<span>秒</span>
+				<input type="text">
+			</li>
+			<li>
+				<button onclick="setCount(event)">确认</button>
+				<button onclick="document.querySelector('.setCountdown').style.display='none';var input = document.querySelectorAll('.setCountdown input');for(var i=0;i<input.length;i++){input[i].value='';}">取消</button>
+			</li>
+		</div>
+		
+		<header>
+			<div class="u-title">
+				<div class="u-tl">todoList</div>
+			</div>
+		</header>
+		<div class="m-box">
+			<div class="m-log">
+				<div class="abbox">
+					<div class="u-round" onclick="location.href='tomato.html'">番茄钟</div>
+					<div class="u-round" onclick="document.querySelector('.setCountdown').style.display='block'">倒计时</div>
+				</div>
+				
+			</div>
+	   	<div class="m-tbox">
+	   		<ul class="now">
+	   			<h2>正在进行</h2>
+	   		</ul>
+	   		<ol class="finished">
+	   			<h2>已完成</h2>
+	   		</ol>
+	    </div>
+    	<div></div>
+        
+    </div>
+    <div class="add"><button>
+    	<svg t="1653122037645" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3032" width="128" height="128"><path d="M864 480H544V160c0-17.67-14.33-32-32-32s-32 14.33-32 32v320H160c-17.67 0-32 14.33-32 32s14.33 32 32 32h320v320c0 17.67 14.33 32 32 32s32-14.33 32-32V544h320c17.67 0 32-14.33 32-32s-14.33-32-32-32z" p-id="3033"></path></svg>
+    </button></div>
+	</body>
+</html>

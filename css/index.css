@@ -1,0 +1,736 @@
+li {
+	list-style: none; 
+}
+
+h2 {
+  color: white;
+}
+
+body {
+  background-color: black;
+  margin: 1px;
+  height: 780px;
+}
+
+button {
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  margin: -1px;
+}
+
+span {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  background-color: #c7c5c5;
+}
+
+@media screen and (min-width: 980px){
+  .setCountdown {
+    position: absolute;
+    display: none;
+    left: 10%;
+    top: 20%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px
+  }
+
+  .setCountdown button {
+    margin-top: 5px;
+  }
+
+  .u-tl {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+
+  }
+
+  .u-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+  }
+
+  .u-square-selected {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+  }
+
+  .u-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .m-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 94%;
+    
+  }
+
+  .m-log {
+    display: flex;
+    flex-direction: column;
+
+    height: 50%;
+    width: 0;
+  }
+
+  .m-log>.abbox {
+    position: absolute;
+    width: 120px;
+    left: -80px;
+    top: 50px;
+    transition: left 0.5s;
+  }
+
+  .m-log>.abbox:hover {
+    position: absolute;
+    width: 120px;
+    left: 0px;
+    top: 50px;
+    transition: left 0.5s;
+  }
+
+  .m-log>.abbox>.u-square,.m-log>.u-square-selected {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 50px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .m-log>.abbox>.u-round {
+    width: 60px;
+    height: 60px;
+    margin-left: 25px;
+    margin-top: 50px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .m-tbox {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 95%;
+  }
+
+  .u-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    margin-top: 30px;
+    /*margin-left: 10px;*/
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .u-line>.square {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    height: 50px;
+    margin: -1px;
+    
+  }
+
+  .u-line>.square>.u-square,.u-line>.square>.u-square-selected {
+    margin-top: 10px;
+    border :1px solid black;
+    border-radius: 5px;
+
+  }
+
+  .u-line>.long {
+    display: flex;
+    width: 70%;
+    height: 45px;
+    margin: -1px;
+    border-top: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .u-line>.triangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 52px;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .triangle:before {
+    border-color: #2c2c2c;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    content: "";
+    display: flex;
+    height: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transform: rotate(45deg);
+    transform-origin: 75% 75%;
+    transition: transform .1s ease;
+    width: 6px;
+  }
+
+  .m-time {
+    height: 60px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .timetable {
+    width: 93%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .timetable>button {
+    background-color: white;
+  }
+
+  .timetable>button:active {
+    background-color: #062d04;
+    color: white;
+  }
+
+  .add {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+  }
+
+  .add button {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  .add button>svg {
+    width: 80px;
+    height: 80px;
+    padding-left: 2px;
+    padding-top: 2px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 980px){
+  body {
+    font-size: 10px;
+    height: 780px;
+  }
+
+  ul {
+    padding-top: 50px;
+  }
+
+  .setCountdown {
+    position: absolute;
+    display: none;
+    right: 10%;
+    top: 5%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px
+  }
+
+  .setCountdown button {
+    margin-top: 5px;
+    margin-left: 12px;
+    padding: 0;
+    width: 50px;
+    font-size: 5px;
+  }
+
+  .setCountdown input {
+    width: 120px;
+  }
+
+
+  .u-tl {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+
+  }
+
+  .u-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .u-square-selected {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+  }
+
+  .u-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .m-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 94%;
+    
+  }
+
+  .m-log {
+    display: flex;
+    flex-direction: row;
+
+    height: 50%;
+    width: 0%;
+  }
+
+  .m-log>.abbox {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    left: 200px;
+    top: 50px;
+    transition: left 0.5s;
+  }
+
+  .m-log>.abbox>.u-round {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .m-tbox {
+    padding-top: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 95%;
+  }
+
+  .u-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+    margin-top: 20px;
+    /*margin-left: 10px;*/
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .u-line>.square {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin: -1px;
+    
+  }
+
+  .u-line>.square>.u-square,.u-line>.square>.u-square-selected {
+    margin-top: 5px;
+    border :1px solid black;
+    border-radius: 5px;
+
+  }
+
+  .u-line>.long {
+    display: flex;
+    width: 70%;
+    height: 27px;
+    margin: -1px;
+    margin-left: 1px;
+    border-top: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .u-line>.triangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 32px;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .triangle:before {
+    border-color: #2c2c2c;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    content: "";
+    display: flex;
+    height: 8px;
+    padding-left: 0px;
+    padding-right: 2px;
+    transform: rotate(45deg);
+    transform-origin: 75% 75%;
+    transition: transform .1s ease;
+    width: 6px;
+  }
+
+  .m-time {
+    height: 70px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .timetable {
+    width: 93%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .timetable>button {
+    background-color: white;
+    width: 80px;
+    font-size: 10px;
+  }
+
+  .timetable>button:active {
+    background-color: #062d04;
+    color: white;
+  }
+
+  .add {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+  }
+
+  .add button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  .add button>svg {
+    width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-top: 2px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px){
+  body {
+    font-size: 10px;
+    height: 400px;
+  }
+
+  ul {
+    padding-top: 50px;
+  }
+
+  .setCountdown {
+    position: absolute;
+    display: none;
+    right: 10%;
+    top: 5%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px
+  }
+
+  .setCountdown button {
+    margin-top: 5px;
+    padding: 0;
+    width: 30px;
+    font-size: 5px;
+  }
+
+  .setCountdown input {
+    width: 50px;
+  }
+
+
+  .u-tl {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+
+  }
+
+  .u-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .u-square-selected {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+  }
+
+  .u-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .m-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 94%;
+    
+  }
+
+  .m-log {
+    display: flex;
+    flex-direction: row;
+
+    height: 50%;
+    width: 0%;
+  }
+
+  .m-log>.abbox {
+    position: absolute;
+    display: flex;
+    width: 150px;
+    left: 80px;
+    top: 50px;
+    transition: left 0.5s;
+  }
+
+  .m-log>.abbox>.u-round {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .m-tbox {
+    padding-top: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 95%;
+  }
+
+  .u-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+    margin-top: 20px;
+    /*margin-left: 10px;*/
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .u-line>.square {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin: -1px;
+    
+  }
+
+  .u-line>.square>.u-square,.u-line>.square>.u-square-selected {
+    margin-top: 5px;
+    border :1px solid black;
+    border-radius: 5px;
+
+  }
+
+  .u-line>.long {
+    display: flex;
+    width: 70%;
+    height: 27px;
+    margin: -1px;
+    margin-left: 1px;
+    border-top: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .u-line>.triangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 32px;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .triangle:before {
+    border-color: #2c2c2c;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    content: "";
+    display: flex;
+    height: 8px;
+    padding-left: 0px;
+    padding-right: 2px;
+    transform: rotate(45deg);
+    transform-origin: 75% 75%;
+    transition: transform .1s ease;
+    width: 6px;
+  }
+
+  .m-time {
+    height: 70px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .timetable {
+    width: 93%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .timetable>button {
+    background-color: white;
+    width: 80px;
+    font-size: 10px;
+  }
+
+  .timetable>button:active {
+    background-color: #062d04;
+    color: white;
+  }
+
+  .add {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+  }
+
+  .add button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  .add button>svg {
+    width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-top: 2px;
+  }
+}
+
